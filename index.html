@@ -1,17 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sasha's Mapbox storymap</title>
+    <title>SF Food Bank Locations</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-    <link rel="stylesheet" href="style.css">
-
 
   </head>
   <style>
@@ -85,7 +84,7 @@
 
     <div id="map"></div>
     <script>
-      var transformRequest = (url, resourceType) => {
+        var transformRequest = (url, resourceType) => {
         var isMapboxRequest =
           url.slice(8, 22) === "api.mapbox.com" ||
           url.slice(10, 26) === "tiles.mapbox.com";
@@ -97,7 +96,7 @@
       };
 
       //YOUR TURN: add your Mapbox access token
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic2FzaGFzYXlzaGkiLCJhIjoiY2lpN2l5NGdzMDA4Z3YzbHhpOGdpenJlZiJ9._oo7Bf5SV7ELBQHy7wuUSQ';
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94LWNvbW11bml0eSIsImEiOiJjazhrbnFhaHMwM3VvM2lteWtra2JnNDJmIn0.w-fLlBJfOL8WeeaDGpZX1g';
       var map = new mapboxgl.Map({
         container: 'map', // container id
         style: "mapbox://styles/mapbox/streets-v11", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
@@ -115,7 +114,7 @@
       function init() {
         Tabletop.init({
           // YOUR TURN: change 'key' value to point to your spreadsheet
-          key: 'https://docs.google.com/spreadsheets/d/11hM9f4oUlGIo254jRBvfUpjGywOb9WLTXomGro95HKE/edit?usp=sharing',
+          key: 'https://docs.google.com/spreadsheets/d/1MiqwGe_7m6B0xFQfaS3GGRO8CmGm5xlXPICDPEeGHyo/edit?usp=sharing',
           // once Tabletop has loaded the data, it passes it to the 'callback' function, 'addPoints', defined below
           callback: addPoints,
           simpleSheet: true
